@@ -1,0 +1,3409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>807</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton 
+{
+text-align: left;
+padding: 3px;
+padding-left: 5px;
+}
+QToolButton::menu-indicator { image: none; }
+/*QFrame[frameShape=&quot;4&quot;],
+QFrame[frameShape=&quot;5&quot;]:hover:
+{
+    border: none;
+    background: white;
+}*/</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_featured">
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_f_searchLine">
+          <property name="maxLength">
+           <number>128</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_f_search">
+          <property name="text">
+           <string>Поиск</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QListWidget" name="listWidget_f_games"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_f_game">
+       <layout class="QGridLayout" name="gridLayout_15">
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <item row="0" column="0" colspan="2">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>773</width>
+             <height>695</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_16">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="bottomMargin">
+             <number>9</number>
+            </property>
+            <item row="7" column="1">
+             <widget class="QLabel" name="label_f_gameRating_2">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Search by Rating:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="2">
+             <widget class="QComboBox" name="comboBox_f_gameRating">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <item>
+               <property name="text">
+                <string>All</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>5</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>6</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>7</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>8</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>9</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="4" column="1" colspan="2">
+             <widget class="QLabel" name="label_f_gameAbout">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>ABOUT THIS GAME</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1" colspan="5">
+             <widget class="QTextEdit" name="textEdit_f_gameDescript">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="autoFormatting">
+               <set>QTextEdit::AutoAll</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="6">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Minimum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="5" column="1" colspan="6">
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="6" rowspan="3">
+             <widget class="QWidget" name="widget_f_game" native="true">
+              <layout class="QGridLayout" name="gridLayout_17">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0" colspan="2">
+                <widget class="QTextEdit" name="textEdit_f_gameSDescript">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="sizeAdjustPolicy">
+                  <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                 </property>
+                 <property name="autoFormatting">
+                  <set>QTextEdit::AutoAll</set>
+                 </property>
+                 <property name="tabChangesFocus">
+                  <bool>true</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="textInteractionFlags">
+                  <set>Qt::TextSelectableByMouse</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QGridLayout" name="gridLayout_22">
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_f_gameDev">
+                   <property name="text">
+                    <string>DEVELOPER:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" colspan="2">
+                  <widget class="Line" name="line_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLabel" name="label_f_gamePub_">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLabel" name="label_f_gameDev_">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0" colspan="2">
+                  <widget class="Line" name="line_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_f_gameRating">
+                   <property name="text">
+                    <string>RATING:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_f_gamePub">
+                   <property name="text">
+                    <string>PUBLISHER:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_f_gameRating_">
+                   <property name="text">
+                    <string>No Reviews</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="5">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QPushButton" name="pushButton_f_game_writeReview">
+                <property name="text">
+                 <string>Write review</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_f_gameItems">
+                <property name="text">
+                 <string>Items</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_f_gameAchievements">
+                <property name="text">
+                 <string>Achievements</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="8" column="1" colspan="6">
+             <widget class="QTableWidget" name="tableWidget_f_gameReviews">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="textElideMode">
+               <enum>Qt::ElideNone</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>30</number>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>User</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Rating</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Review</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QPushButton" name="pushButton_f_gameAddToCart">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+background-color:green;
+color:rgba(255,255,255,0.7);
+text-align: center;
+padding: 3px;
+}
+QPushButton:hover
+{
+color:rgba(255,255,255,0.9);
+background-color:rgba(0,150,0,1);
+}
+QPushButton:disabled
+{
+background-color:rgba(0,104,0,1);
+color:rgba(127,127,127,1);
+}</string>
+              </property>
+              <property name="text">
+               <string>Add to Cart</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="4">
+             <widget class="QLabel" name="label_f_gamePrice">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PREICE</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="6">
+             <widget class="QLabel" name="label_f_gameName">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>TEXT TEXT TEXT TEXT</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_achievements">
+       <layout class="QGridLayout" name="gridLayout_20">
+        <item row="0" column="0" colspan="2">
+         <widget class="QScrollArea" name="scrollArea_a">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_a">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>88</width>
+             <height>94</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_a_description">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAsNeeded</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <column>
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Description</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>% of all players</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_market">
+       <layout class="QGridLayout" name="gridLayout_24">
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea_m">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_m_1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>145</width>
+             <height>173</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_25">
+            <item row="1" column="0" colspan="2">
+             <widget class="QTableWidget" name="tableWidget_m_items">
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PRICE</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>GAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>BUY</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_m_Search">
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pushButton_m_search">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Поиск</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLineEdit" name="lineEdit_m_itemName">
+                <property name="maxLength">
+                 <number>64</number>
+                </property>
+                <property name="placeholderText">
+                 <string>Название предмета...</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLineEdit" name="lineEdit_m_gameName">
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+                <property name="placeholderText">
+                 <string>Название игры...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <spacer name="horizontalSpacer_m_1">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_library">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1" rowspan="3">
+         <widget class="QWidget" name="widget_l_gameInfo" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0" colspan="5">
+            <widget class="QLabel" name="label_l_gameName">
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="5">
+            <layout class="QHBoxLayout" name="horizontalLayout_l_buttons">
+             <item>
+              <widget class="QPushButton" name="pushButton_l_storePage">
+               <property name="styleSheet">
+                <string notr="true">text-align: center;
+padding: 3px;</string>
+               </property>
+               <property name="text">
+                <string>Store Page</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_l_achievements">
+               <property name="styleSheet">
+                <string notr="true">text-align: center;
+padding: 3px;</string>
+               </property>
+               <property name="text">
+                <string>My Achievements</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_l_inventory">
+               <property name="styleSheet">
+                <string notr="true">text-align: center;
+padding: 3px;</string>
+               </property>
+               <property name="text">
+                <string>My Inventory</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_l_review">
+               <property name="styleSheet">
+                <string notr="true">text-align: center;
+padding: 3px;</string>
+               </property>
+               <property name="text">
+                <string>My Review</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_l_delete">
+               <property name="styleSheet">
+                <string notr="true">text-align: center;
+padding: 3px;</string>
+               </property>
+               <property name="text">
+                <string>Delete Game</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0" colspan="5">
+            <widget class="QTextEdit" name="textEdit_l_gameDescription">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="2">
+            <widget class="QPushButton" name="pushButton_l_gamePlay">
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+background-color:green;
+color:rgba(255,255,255,0.7);
+text-align: center;
+padding: 3px;
+}
+QPushButton:hover
+{
+color:rgba(255,255,255,0.9);
+background-color:rgba(0,150,0,1);
+}</string>
+             </property>
+             <property name="text">
+              <string>PLAY</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" rowspan="2" colspan="4">
+            <layout class="QGridLayout" name="gridLayout_l_labels">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_l_gamePlayTime">
+               <property name="text">
+                <string>PLAY TIME</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_l_gamePlayTime_">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="2">
+         <widget class="QListWidget" name="listWidget_l_games">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="lineEdit_l_searchLine">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <italic>true</italic>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="maxLength">
+           <number>128</number>
+          </property>
+          <property name="placeholderText">
+           <string>Search by Name</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_inventory">
+       <layout class="QGridLayout" name="gridLayout_23">
+        <item row="1" column="0" colspan="2">
+         <widget class="QScrollArea" name="scrollArea_inventory">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_inventory_1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>88</width>
+             <height>94</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_26">
+            <item row="0" column="0">
+             <widget class="QTableWidget" name="tableWidget_inventory">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PRICE</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>AMOUNT</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer_inventory_1">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_inventory_username">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Инвентарь пользователя</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_user_achievements">
+       <layout class="QGridLayout" name="gridLayout_21">
+        <item row="1" column="0" colspan="2">
+         <widget class="QScrollArea" name="scrollArea_ua">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_ua_description">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>84</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTableWidget" name="tableWidget_ua_description">
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <column>
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Description</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Earned</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_ua_1">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label_ua_username">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Достижения пользователя</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_writeReview">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <spacer name="horizontalSpacer_wr_1">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>212</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_writeReview">
+          <item row="6" column="0" colspan="3">
+           <widget class="QTextEdit" name="textEdit_wr_review"/>
+          </item>
+          <item row="2" column="0" colspan="3">
+           <widget class="QLabel" name="label_wr_rating">
+            <property name="text">
+             <string>Rate:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="3">
+           <widget class="QComboBox" name="comboBox_wr_rating">
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="Line" name="line_wr_1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="3">
+           <widget class="Line" name="line_wr_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="3">
+           <widget class="QLabel" name="label_wr_info">
+            <property name="text">
+             <string>Write a Review</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="3">
+           <widget class="QLabel" name="label_wr_review">
+            <property name="text">
+             <string>Review:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" rowspan="2">
+           <spacer name="horizontalSpacer_wr">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="8" column="1" colspan="2">
+           <widget class="QPushButton" name="pushButton_wr_review">
+            <property name="text">
+             <string>Write a Review</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1" colspan="2">
+           <widget class="QLabel" name="label_wr_amount">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_wr_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>211</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_profile">
+       <layout class="QGridLayout" name="gridLayout_28">
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayout_profile">
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_profile_username_">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="lineEdit_profile_username">
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="4">
+           <widget class="QComboBox" name="comboBox_profile_game"/>
+          </item>
+          <item row="5" column="0" colspan="4">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0" colspan="4">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="pushButton_profile_achievements">
+              <property name="text">
+               <string>ACHIEVEMENTS</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_profile_inventory">
+              <property name="text">
+               <string>INVENTORY</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButton_profile_username">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>CHANGE</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_profile_username">
+            <property name="text">
+             <string>Username:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="4">
+           <widget class="QLabel" name="label_profile_error">
+            <property name="styleSheet">
+             <string notr="true">border:1px solid red;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_cart">
+       <layout class="QGridLayout" name="gridLayout_18">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_cart_empty">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>24</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Ooops... Your cart is empty! Let's buy something!</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QScrollArea" name="scrollArea_cart">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_cart">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>205</width>
+             <height>270</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_19">
+            <item row="0" column="0" colspan="3">
+             <layout class="QVBoxLayout" name="verticalLayout_cart_games">
+              <item>
+               <widget class="QLabel" name="label_cart_games">
+                <property name="text">
+                 <string>YOUR CART GAMES</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_cart_games">
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>NAME</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>PRICE</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>STORE</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>DELETE</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="pushButton_cart_buy">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+background-color:green;
+color:rgba(255,255,255,0.7);
+text-align: center;
+padding: 3px;
+}
+QPushButton:hover
+{
+color:rgba(255,255,255,0.9);
+background-color:rgba(0,150,0,1);
+}</string>
+              </property>
+              <property name="text">
+               <string>BUY</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="3">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QLabel" name="label_cart_items">
+                <property name="text">
+                 <string>YOUR CART ITEMS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_cart_items">
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>NAME</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>PRICE</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>AMOUNT</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>GAME</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>AMOUNT</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>DELETE</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="label_cart_price">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_create">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="1">
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <layout class="QGridLayout" name="gridLayout_29">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_addGame">
+            <property name="text">
+             <string>Добавить игру</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_addGame">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Add Game</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_c_game">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea_c_game">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_c_game">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>234</width>
+             <height>1916</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="28" column="0" colspan="4">
+             <widget class="QTableWidget" name="tableWidget_c_gameAchievements">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="34" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gameInventory_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="19" column="3">
+             <widget class="QPushButton" name="pushButton_c_gamePublisherAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="3">
+             <widget class="QPushButton" name="pushButton_c_gameDeveloperDelete">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_c_gamePrice"/>
+            </item>
+            <item row="27" column="0">
+             <widget class="QPushButton" name="pushButton_c_gameAchievementAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_c_gameName">
+              <property name="maxLength">
+               <number>128</number>
+              </property>
+             </widget>
+            </item>
+            <item row="19" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_c_gamePublisher">
+              <property name="maxLength">
+               <number>128</number>
+              </property>
+             </widget>
+            </item>
+            <item row="26" column="0">
+             <widget class="QCheckBox" name="checkBox_c_gameAchievements">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Achievements</string>
+              </property>
+             </widget>
+            </item>
+            <item row="23" column="3">
+             <widget class="QPushButton" name="pushButton_c_gamePublisher">
+              <property name="text">
+               <string>CREATE NEW</string>
+              </property>
+             </widget>
+            </item>
+            <item row="25" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gamePublisher_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_c_gameName">
+              <property name="text">
+               <string>Name</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="22" column="3">
+             <widget class="QPushButton" name="pushButton_c_gamePublisherDelete">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="0" colspan="4">
+             <widget class="QListWidget" name="listWidget_c_gameDevelopers">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </item>
+            <item row="19" column="0">
+             <widget class="QLabel" name="label_c_gamePublisher">
+              <property name="text">
+               <string>Publisher</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="30" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gameAchievements_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="24" column="0" colspan="4">
+             <widget class="QScrollArea" name="scrollArea_c_gameNewPublish">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::VLine</enum>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_c_gameNewPublish">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>198</width>
+                 <height>123</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_7" rowstretch="0,0,0" columnstretch="0,0,0">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QLineEdit" name="lineEdit_c_gameNewPublishName">
+                  <property name="maxLength">
+                   <number>128</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_c_gameNewPublishName">
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_c_gameNewPublishCancel">
+                  <property name="text">
+                   <string>CANCEL</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="pushButton_c_gameNewPublish">
+                  <property name="text">
+                   <string>CREATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <widget class="QLabel" name="label_c_gameNewPublish_error">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:1px solid red;
+padding: 5px;</string>
+                  </property>
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+            <item row="16" column="3">
+             <widget class="QPushButton" name="pushButton_c_gameDeveloper">
+              <property name="text">
+               <string>CREATE NEW</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" colspan="4">
+             <widget class="QTextEdit" name="textEdit_c_gameShortDescription">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="tabChangesFocus">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gameDeveloper_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="0" colspan="4">
+             <widget class="QScrollArea" name="scrollArea_c_gameNewDev">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_c_gameNewDev">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>198</width>
+                 <height>123</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="pushButton_c_gameNewDev">
+                  <property name="text">
+                   <string>CREATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_c_gameNewDevCancel">
+                  <property name="text">
+                   <string>CANCEL</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_c_gameNewDevName">
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="2">
+                 <widget class="QLineEdit" name="lineEdit_c_gameNewDevName">
+                  <property name="maxLength">
+                   <number>128</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <widget class="QLabel" name="label_c_gameNewDev_error">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:1px solid red;
+padding: 5px;</string>
+                  </property>
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+            <item row="31" column="0">
+             <widget class="QCheckBox" name="checkBox_c_gameInventory">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Inventory</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="3">
+             <widget class="QCheckBox" name="checkBox_developerIsPublisher">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Developer is Publisher?</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0" colspan="4">
+             <widget class="QTextEdit" name="textEdit_c_gameDescription">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="tabChangesFocus">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="33" column="0" colspan="4">
+             <widget class="QTableWidget" name="tableWidget_c_gameInventory">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PRICE</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gameName_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_c_gameDeveloper">
+              <property name="maxLength">
+               <number>128</number>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0">
+             <widget class="QLabel" name="label_c_gameDeveloper">
+              <property name="text">
+               <string>Developer</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gamePrice_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="4">
+             <widget class="QLabel" name="label_c_gameLogo">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="35" column="3">
+             <widget class="QPushButton" name="pushButton_c_gameContinue">
+              <property name="text">
+               <string>CONTINUE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_c_gameDescription">
+              <property name="text">
+               <string>Description:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_c_gamePrice">
+              <property name="text">
+               <string>Price</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="3">
+             <widget class="QPushButton" name="pushButton_c_gameDeveloperAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_c_gameShortDescription">
+              <property name="text">
+               <string>Short Description:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="21" column="0" colspan="4">
+             <widget class="QListWidget" name="listWidget_c_gamePublishers">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="32" column="0">
+             <widget class="QPushButton" name="pushButton_c_gameItemAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_update">
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="1" column="2">
+         <layout class="QGridLayout" name="gridLayout_30">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_updateGameName">
+            <property name="text">
+             <string>Update game</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_updateGame">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>UPDATE GAME</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_updateGameName">
+            <property name="placeholderText">
+             <string>Enter game name...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QLabel" name="label_updateGame_error">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:1px solid red;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_u_game">
+       <layout class="QGridLayout" name="gridLayout_10">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea_u_game">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_u_game">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>294</width>
+             <height>1986</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="27" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gameInventory_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameSdescriptSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="3">
+             <widget class="QLineEdit" name="lineEdit_u_gamePub"/>
+            </item>
+            <item row="12" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameDevSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameSdescript">
+              <property name="text">
+               <string>Short Description</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameDescript">
+              <property name="text">
+               <string>Description</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="0" colspan="4">
+             <widget class="QListWidget" name="listWidget_u_gamePub">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="19" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameAchieve">
+              <property name="text">
+               <string>Achievements</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gamePubAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" colspan="4">
+             <widget class="QTextEdit" name="textEdit_u_gameSdescript">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="tabChangesFocus">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="21" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameAchieveSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gamePub">
+              <property name="text">
+               <string>Publisher</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="25" column="4" rowspan="2" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameInventorySave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="22" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gameAchieve_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gamePriceSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="25" column="0" rowspan="2" colspan="4">
+             <widget class="QTableWidget" name="tableWidget_u_gameInventory">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PRICE</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="23" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameInventory">
+              <property name="text">
+               <string>Inventory</string>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="0" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gamePubDelete">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gamePubSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameDescriptSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gameDev_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="20" column="0" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameAchieveAdd">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="24" column="0" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameItemAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="lineEdit_u_gameName"/>
+            </item>
+            <item row="1" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameNameSave">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>SAVE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="13" column="0" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameDevDelete">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="21" column="0" colspan="4">
+             <widget class="QTableWidget" name="tableWidget_u_gameAchieve">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <column>
+               <property name="text">
+                <string>NAME</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DESCRIPTION</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gamePrice">
+              <property name="text">
+               <string>Price</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="3">
+             <widget class="QLineEdit" name="lineEdit_u_gameDev"/>
+            </item>
+            <item row="4" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gamePrice_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gameName_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameName">
+              <property name="text">
+               <string>Name</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLineEdit" name="lineEdit_u_gamePrice"/>
+            </item>
+            <item row="0" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_logo">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="4" colspan="2">
+             <widget class="QPushButton" name="pushButton_u_gameDevAdd">
+              <property name="text">
+               <string>ADD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="4">
+             <widget class="QTextEdit" name="textEdit_u_gameDescript">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustIgnored</enum>
+              </property>
+              <property name="tabChangesFocus">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0" colspan="3">
+             <widget class="QLabel" name="label_u_gameDev">
+              <property name="text">
+               <string>Developer</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0" colspan="4">
+             <widget class="QListWidget" name="listWidget_u_gameDev">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="0" colspan="6">
+             <widget class="QLabel" name="label_u_gamePub_error">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_delete">
+       <layout class="QGridLayout" name="gridLayout_12" rowstretch="0" columnstretch="0,0,0,0,0" rowminimumheight="0" columnminimumwidth="0,0,0,0,0">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0" colspan="5">
+         <widget class="QScrollArea" name="scrollArea_delete">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>215</width>
+             <height>376</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="12" column="0">
+             <widget class="QLabel" name="label_deleteUser">
+              <property name="text">
+               <string>Choose user</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_deletePublish"/>
+            </item>
+            <item row="13" column="0" colspan="4">
+             <widget class="QLabel" name="label_deleteUser_error">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pushButton_deleteDev_open">
+              <property name="text">
+               <string>DELETE DEVELOPER</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="3">
+             <widget class="QPushButton" name="pushButton_deleteUser">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QPushButton" name="pushButton_deleteGame">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" colspan="4">
+             <widget class="QLabel" name="label_deleteDev_error">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_deleteUser"/>
+            </item>
+            <item row="11" column="0">
+             <widget class="QPushButton" name="pushButton_deleteUser_open">
+              <property name="text">
+               <string>DELETE USER</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_deleteDev"/>
+            </item>
+            <item row="9" column="3">
+             <widget class="QPushButton" name="pushButton_deletePublish">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="4">
+             <widget class="QLabel" name="label_delete_logo">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pushButton_deleteGame_open">
+              <property name="text">
+               <string>DELETE GAME</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <widget class="QLabel" name="label_deleteGame_error">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_deletePublish">
+              <property name="text">
+               <string>Choose publisher</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_deleteGame">
+              <property name="text">
+               <string>Choose game</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QPushButton" name="pushButton_deletePublish_open">
+              <property name="text">
+               <string>DELETE PUBLISHER</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_deleteDev">
+              <property name="text">
+               <string>Choose developer</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="2">
+             <widget class="QLineEdit" name="lineEdit_deleteGame"/>
+            </item>
+            <item row="6" column="3">
+             <widget class="QPushButton" name="pushButton_deleteDev">
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="4">
+             <widget class="QLabel" name="label_deletePublish_error">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:1px solid red;
+padding: 5px;</string>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_error">
+       <layout class="QGridLayout" name="gridLayout_27">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_error_oops">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>44</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Oops, something goes wrong!</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_error">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid red;
+padding: 5px;</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_load"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>807</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="title">
+     <string>Войти</string>
+    </property>
+    <addaction name="action_profile"/>
+    <addaction name="action_logOut"/>
+    <addaction name="separator"/>
+    <addaction name="action_admin"/>
+    <addaction name="separator"/>
+    <addaction name="action_cart"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::TopToolBarArea</set>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextOnly</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="action_profile">
+   <property name="text">
+    <string>Посмотреть свой профиль</string>
+   </property>
+  </action>
+  <action name="action_logOut">
+   <property name="text">
+    <string>Выйти из аккаунта: </string>
+   </property>
+  </action>
+  <action name="action_admin">
+   <property name="text">
+    <string>Войти как администратор</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_cart">
+   <property name="text">
+    <string>Корзина</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_u_gameName</tabstop>
+  <tabstop>pushButton_u_gameNameSave</tabstop>
+  <tabstop>lineEdit_u_gamePrice</tabstop>
+  <tabstop>pushButton_u_gamePriceSave</tabstop>
+  <tabstop>textEdit_u_gameSdescript</tabstop>
+  <tabstop>pushButton_u_gameSdescriptSave</tabstop>
+  <tabstop>textEdit_u_gameDescript</tabstop>
+  <tabstop>pushButton_u_gameDescriptSave</tabstop>
+  <tabstop>lineEdit_u_gameDev</tabstop>
+  <tabstop>pushButton_u_gameDevAdd</tabstop>
+  <tabstop>listWidget_u_gameDev</tabstop>
+  <tabstop>pushButton_u_gameDevDelete</tabstop>
+  <tabstop>pushButton_u_gameDevSave</tabstop>
+  <tabstop>lineEdit_u_gamePub</tabstop>
+  <tabstop>pushButton_u_gamePubAdd</tabstop>
+  <tabstop>listWidget_u_gamePub</tabstop>
+  <tabstop>pushButton_u_gamePubDelete</tabstop>
+  <tabstop>pushButton_u_gamePubSave</tabstop>
+  <tabstop>pushButton_u_gameAchieveAdd</tabstop>
+  <tabstop>tableWidget_u_gameAchieve</tabstop>
+  <tabstop>pushButton_u_gameAchieveSave</tabstop>
+  <tabstop>pushButton_u_gameItemAdd</tabstop>
+  <tabstop>tableWidget_u_gameInventory</tabstop>
+  <tabstop>pushButton_u_gameInventorySave</tabstop>
+  <tabstop>textEdit_l_gameDescription</tabstop>
+  <tabstop>pushButton_l_gamePlay</tabstop>
+  <tabstop>listWidget_l_games</tabstop>
+  <tabstop>scrollArea_u_game</tabstop>
+  <tabstop>lineEdit_c_gameDeveloper</tabstop>
+  <tabstop>pushButton_c_gameItemAdd</tabstop>
+  <tabstop>pushButton_c_gameNewDevCancel</tabstop>
+  <tabstop>pushButton_c_gameAchievementAdd</tabstop>
+  <tabstop>listWidget_c_gameDevelopers</tabstop>
+  <tabstop>lineEdit_c_gameName</tabstop>
+  <tabstop>pushButton_c_gamePublisherDelete</tabstop>
+  <tabstop>tableWidget_c_gameAchievements</tabstop>
+  <tabstop>pushButton_c_gamePublisher</tabstop>
+  <tabstop>listWidget_c_gamePublishers</tabstop>
+  <tabstop>lineEdit_c_gameNewDevName</tabstop>
+  <tabstop>lineEdit_c_gamePublisher</tabstop>
+  <tabstop>pushButton_c_gameDeveloperAdd</tabstop>
+  <tabstop>lineEdit_c_gamePrice</tabstop>
+  <tabstop>pushButton_c_gameDeveloperDelete</tabstop>
+  <tabstop>scrollArea_delete</tabstop>
+  <tabstop>lineEdit_deletePublish</tabstop>
+  <tabstop>pushButton_deleteDev_open</tabstop>
+  <tabstop>pushButton_deleteUser</tabstop>
+  <tabstop>pushButton_deleteGame</tabstop>
+  <tabstop>lineEdit_deleteUser</tabstop>
+  <tabstop>pushButton_deleteUser_open</tabstop>
+  <tabstop>lineEdit_deleteDev</tabstop>
+  <tabstop>pushButton_deletePublish</tabstop>
+  <tabstop>pushButton_deleteGame_open</tabstop>
+  <tabstop>pushButton_deletePublish_open</tabstop>
+  <tabstop>lineEdit_deleteGame</tabstop>
+  <tabstop>pushButton_deleteDev</tabstop>
+  <tabstop>pushButton_c_gameDeveloper</tabstop>
+  <tabstop>pushButton_c_gameNewDev</tabstop>
+  <tabstop>pushButton_c_gamePublisherAdd</tabstop>
+  <tabstop>lineEdit_c_gameNewPublishName</tabstop>
+  <tabstop>pushButton_c_gameNewPublishCancel</tabstop>
+  <tabstop>pushButton_c_gameNewPublish</tabstop>
+  <tabstop>tableWidget_c_gameInventory</tabstop>
+  <tabstop>textEdit_c_gameShortDescription</tabstop>
+  <tabstop>textEdit_c_gameDescription</tabstop>
+  <tabstop>pushButton_c_gameContinue</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
